@@ -25,7 +25,20 @@ typedef int (*Comparer) (const void *a, const void *b);
 int my_comparer(const void *this, const void *that)
 {
 	//TODO: IMPLEMENT ME!
-	return 0;
+  int time1, time2;
+  int initial = *(((int*)this + 2)); // deference to make same conversion
+  int second = *(((int*)that + 2));
+
+  // compare the initial to the second
+  if(initial == second) {
+    
+    // if the happen at the same time
+    time1 = *(((int*)this + 1) );
+    time2 = *(((int*)that + 1) );
+    return (time1 - time2);
+  }
+
+  return (time1 - time2);
 }
 
 int main(int argc, char *argv[])
