@@ -66,6 +66,7 @@ int main(int argc, char *argv[])
 	/* sort the input  */
 	/*******************/
 	Comparer process_comparer = &my_comparer;
+  process_comparer = &my_comparer;
 
 #if DEBUG
 	for (int i = 0; i < P_SIZE; i++) {
